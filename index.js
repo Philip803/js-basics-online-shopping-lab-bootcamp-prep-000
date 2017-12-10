@@ -78,7 +78,7 @@ function removeFromCart(item) {
   }
   
   if(temObj != true){
-     conole.log("That item is not in your cart.")
+     console.log("That item is not in your cart.")
   } 
 
   return cart;  
