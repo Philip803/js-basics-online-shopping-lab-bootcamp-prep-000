@@ -29,6 +29,10 @@ function viewCart() {
     const a = arr[firstObj]
     console.log(`In your cart, you have ${firstObj} at $${a}.`);
   } else if(cart.length === 2){
+    
+  } else if(cart.length === 3){
+    
+  }
     const arr = cart[0];
     const firstObj = Object.keys(arr)[0];
     const arr2 = cart[1];
