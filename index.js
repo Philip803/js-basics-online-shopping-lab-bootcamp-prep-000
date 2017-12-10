@@ -72,7 +72,8 @@ function removeFromCart(item) {
   for(var i = 0 ; i<cart.length;i++){
     var arr = cart[i]
     if(arr.hasOwnProperty(item)){
-      delete arr.item;
+      var index = cart.indexOf(item)
+      cart.splice(index,1)
       result = true;
     }
   }
