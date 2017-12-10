@@ -39,7 +39,7 @@ function viewCart() {
     const firstObj = Object.keys(arr)[0];
     const arr2 = cart[1];
     const secondObj = Object.keys(arr2)[0];
-    var result = `In your cart, you have ${firstObj} at $${arr[firstObj]} , ${secondObj} at $${arr2[secondObj]},`;
+    var result = `In your cart, you have ${firstObj} at $${arr[firstObj]}, ${secondObj} at $${arr2[secondObj]},`;
     var eachItem = ""
     for(var i = 2; i<cart.length - 1; i++){
       var arr3 = cart[i];
