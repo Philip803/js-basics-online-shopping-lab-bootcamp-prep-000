@@ -71,9 +71,8 @@ function removeFromCart(item) {
   var result = false;
   for(var i = 0 ; i<cart.length;i++){
     var arr = cart[i]
-    var obj = arr[0]
-    if(obj.hasOwnProperty(item)){
-      delete each[item];
+    if(arr.hasOwnProperty(item)){
+      delete arr[item];
       result = true;
     }
   }
