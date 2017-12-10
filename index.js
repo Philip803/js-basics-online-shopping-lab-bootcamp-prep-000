@@ -71,7 +71,7 @@ function removeFromCart(item) {
   var result = false;
   for(var each in cart){
     if(each.hasOwnProperty(item)){
-      delete [item];
+      delete each[item];
       result = true;
     }
   }
