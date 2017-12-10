@@ -11,14 +11,47 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
+ var itemPrice = Math.floor(Math.random() * 100);
+ var obj = {} 
+ obj[item] = itemPrice;
+ console.log(`${item} has been added to your cart.`)
+ cart.push(obj);
+ return cart;
 }
 
 function viewCart() {
   // write your code here
+  var result = "";
+  if(cart.length === 0){
+    console.log("Your shopping cart is empty.");
+  } else if(cart.length == 1) {
+    const arr = cart[0];
+    const firstObj = Object.keys(arr)[0];
+    const a = arr[firstObj]
+    console.log(`In your cart, you have ${firstObj} at $${a}.`);
+  // } else if(cart.length === 2){
+  //   var arr2 = cart[1];
+  //   var secondObj = Object.keys(arr2);
+  //   result = `In you cart, you have ${firstObj} at ${arr.firstObj} and ${secondObj} at $${arr2.secondObj}.`;
+  // } else {
+  //   var eachItem = "";
+     
+  //   for(var i = 2; i<cart.length; i++){
+  //     var arr3 = cart[i];
+  //     var obj = Object.keys(arr3);
+  //     for(const each in obj){
+  //         eachItem += `${each} at $${obj[each]} `
+  //         }
+  //   }
+  //   result = `In your cart, you have ${eachItem} .`;
+  // }
+  // console.log(result);
+  }
 }
 
 function total() {
   // write your code here
+  //total price
 }
 
 function removeFromCart(item) {
