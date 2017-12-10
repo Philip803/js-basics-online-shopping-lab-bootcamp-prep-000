@@ -68,7 +68,18 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  var temObj = false;
   
+  for(var each in cart){
+    if(each.hasOwnProperty(item)){
+      delete each;
+      temObj = true;
+    }
+  }
+  
+  if(temObj != true){
+     conole.log("That item is not in your cart.")
+  } 
 
   return cart;  
 }
