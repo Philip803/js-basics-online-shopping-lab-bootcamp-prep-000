@@ -69,9 +69,11 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   var result = false;
-  for(var each in cart){
-    if(each.hasOwnProperty(item)){
-      delete each[0][item];
+  for(var i = 0 ; i<cart.length;i++){
+    var arr = cart[i]
+    var obj = arr[0]
+    if(obj.hasOwnProperty(item)){
+      delete each[item];
       result = true;
     }
   }
