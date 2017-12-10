@@ -56,7 +56,7 @@ function viewCart() {
 function total() {
   // write your code here
   //total price
-  var totalPrice;
+  var totalPrice = 0;
   for(var i = 0; i<cart.length;i++){
     var arr = cart[i];
     var key = Object.keys(arr)[0];
