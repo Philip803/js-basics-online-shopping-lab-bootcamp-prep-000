@@ -59,7 +59,7 @@ function total() {
   var totalPrice;
   for(var i = 0; i<cart.length;i++){
     var arr = cart[i];
-    var key = Object.keys(arr);
+    var key = Object.keys(arr)[0];
     var value = arr[key];
     totalPrice += value;
   }
