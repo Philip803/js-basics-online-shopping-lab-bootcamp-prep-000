@@ -29,10 +29,12 @@ function viewCart() {
     const a = arr[firstObj]
     console.log(`In your cart, you have ${firstObj} at $${a}.`);
   } else if(cart.length === 2){
-    
+    const arr = cart[0];
+    const firstObj = Object.keys(arr)[0];
+    const arr2 = cart[1];
+    const secondObj = Object.keys(arr2)[0];
+    console.log(`In your cart, you have ${firstObj} at $${arr[firstObj]} and ${secondObj} at $${arr2[secondObj]}.`);
   } else if(cart.length === 3){
-    
-  }
     const arr = cart[0];
     const firstObj = Object.keys(arr)[0];
     const arr2 = cart[1];
