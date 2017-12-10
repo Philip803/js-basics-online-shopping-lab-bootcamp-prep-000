@@ -21,7 +21,6 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var result = "";
   if(cart.length === 0){
     console.log("Your shopping cart is empty.");
   } else if(cart.length == 1) {
@@ -30,22 +29,21 @@ function viewCart() {
     const a = arr[firstObj]
     console.log(`In your cart, you have ${firstObj} at $${a}.`);
   } else if(cart.length === 2){
-    var arr2 = cart[1];
-    var secondObj = Object.keys(arr2);
-    result = `In you cart, you have ${firstObj} at ${arr.firstObj} and ${secondObj} at $${arr2.secondObj}.`;
-  } else {
-    var eachItem = "";
-     
-    for(var i = 2; i<cart.length; i++){
+    const arr = cart[0];
+    const firstObj = Object.keys(arr)[0];
+    const arr2 = cart[1];
+    const secondObj = Object.keys(arr2)[0];
+    var result = `In your cart, you have ${firstObj} at $${arr[firstObj]} , ${secondObj} at $${arr2[secondObj]},`;
+    var eachItem = ""
+    for(var i = 2; i<cart.length - 1; i++){
       var arr3 = cart[i];
-      var obj = Object.keys(arr3);
-      for(const each in obj){
-          eachItem += `${each} at $${obj[each]} `
-          }
+      var obj = Object.keys(arr3)[0];
+      eachItem += ` ${obj} at $${arr3[obj]},`
     }
-    result = `In your cart, you have ${eachItem} .`;
-  }
-  console.log(result);
+      var arr4 = cart[cart.length - 1];
+      var lastObj = Object.keys(arr4)[0];
+      eachItem += ` and ${lastObj} at $${arr4[lastObj]}.`;
+      console.log(result + eachItem);
   }
 }
 
