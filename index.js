@@ -87,7 +87,7 @@ function placeOrder(cardNumber) {
   if(cardNumber === null){
     console.log("Sorry, we don't have a credit card on file for you.")
   } else {
-    
+    console.log(`${total()}`);
   }
-  return splice(0)
+  return cart.splice(0);
 }
