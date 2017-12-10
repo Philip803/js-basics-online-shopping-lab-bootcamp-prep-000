@@ -68,19 +68,16 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var temObj = false;
-  
+  var result = false;
   for(var each in cart){
     if(each.hasOwnProperty(item)){
       delete [item];
-      temObj = true;
+      result = true;
     }
   }
-  
-  if(temObj === false){
+  if(result === false){
      console.log("That item is not in your cart.")
-  } 
-
+  }
   return cart;  
 }
 
